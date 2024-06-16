@@ -1,0 +1,23 @@
+:root {
+  /* primary */
+  --green-200: #dff1e7;
+  --green-600: #0c7d69;
+  --red: hsl(0, 66%, 54%);
+  /* neutral */
+  --white: hsl(0, 0%, 100%);
+  --grey-500: hsl(186, 15%, 59%);
+  --grey-900: hsl(187, 24%, 22%);
+}
+
+.karla {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+}
+
+body {
+  font-size: 16px;
+  margin: 0 15px;
+  background-color: var(--green-200);
+}

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/app.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Frontend Mentor | Contact form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body
+    class="karla mx-5 lg:grid lg:place-content-center lg:grid-rows-1 lg:items-center h-screen relative"
+  >
+    <div
+      class="hidden bg-[var(--grey-900)] rounded-md p-4 text-white absolute w-[80vw] lg:w-[40vw] top-5 inset-x-0 m-auto"
+      id="sucess-message"
+    >
+      <div class="flex flex-col gap-2 justify-center">
+        <div class="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="21"
+            fill="none"
+            viewBox="0 0 20 21"
+          >
+            <path
+              fill="#fff"
+              d="M14.28 7.72a.748.748 0 0 1 0 1.06l-5.25 5.25a.748.748 0 0 1-1.06 0l-2.25-2.25a.75.75 0 1 1 1.06-1.06l1.72 1.72 4.72-4.72a.75.75 0 0 1 1.06 0Zm5.47 2.78A9.75 9.75 0 1 1 10 .75a9.76 9.76 0 0 1 9.75 9.75Zm-1.5 0A8.25 8.25 0 1 0 10 18.75a8.26 8.26 0 0 0 8.25-8.25Z"
+            />
+          </svg>
+          <span class="font-bold text-lg">Message Sent!</span>
+        </div>
+        <span>Thanks for completing the form. We'll be in touch soon!</span>
+      </div>
+    </div>
+    <main class="my-5">
+      <div class="bg-white p-8 rounded-lg lg:w-[50vw]">
+        <form class="" id="form">
+          <!-- 3 primeros campos -->
+
+          <fieldset>
+            <legend class="font-medium text-2xl mt-0 mb-5">Contact Us</legend>
+            <div class="lg:grid lg:grid-cols-2 lg:gap-x-5 *:mb-5">
+              <div>
+                <label
+                  for="first_name"
+                  class="after:content-['*'] after:ml-1 after:text-green-400 mb-4"
+                >
+                  First Name
+                </label>
+                <input
+                  class="peer mt-4 outline-none w-full rounded-md bg-white border-solid border border-[hsl(186, 15%, 59%)] py-2 px-3 focus:border-[var(--green-600)] hover:border-[var(--green-600)] transition ease-in-out delay-60"
+                  name="first_name"
+                  id="first_name"
+                  type="text"
+                  placeholder="First Name"
+                  required
+                  autofocus
+                />
+                <span class="hidden">Ok</span>
+              </div>
+              <div>
+                <label
+                  class="after:content-['*'] after:ml-2 after:text-green-400 mb-4"
+                  for="apellido"
+                >
+                  Last Name
+                </label>
+                <input
+                  class="mt-4 outline-none w-full rounded-md bg-white border-solid border border-[hsl(186, 15%, 59%)] py-2 px-3 focus:border-[var(--green-600)] hover:border-[var(--green-600)] transition ease-in-out delay-60"
+                  name="last_name"
+                  id="last_name"
+                  type="text"
+                  placeholder="Last Name"
+                  required
+                />
+              </div>
+              <div class="col-start-1 col-end-[-1]">
+                <label
+                  class="after:content-['*'] after:ml-2 after:text-green-400"
+                  for="email"
+                >
+                  Email Adress
+                </label>
+                <input
+                  class="mt-4 outline-none w-full rounded-md bg-white border-solid border border-[hsl(186, 15%, 59%)] py-2 px-3 focus:border-[var(--green-600)] hover:border-[var(--green-600)] transition ease-in-out delay-60"
+                  name="email"
+                  id="email"
+                  type="email"
+                  placeholder="test@gmail.com"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- ultimos 3 campos -->
+            <div class="">
+              <fieldset class="form-fieldset container-fieldset-radio">
+                <legend
+                  class="mb-4 after:content-['*'] after:ml-2 after:text-green-400"
+                >
+                  Query Type
+                </legend>
+
+                <div
+                  class="lg:flex lg:justify-between lg:gap-5 *:mb-5 *:w-full"
+                >
+                  <label
+                    for="general_enquiry"
+                    class="outline-none rounded-md bg-white border-solid border border-[hsl(186, 15%, 59%)] flex py-2 px-3 has-[:checked]:bg-[var(--green-200)] has-[:checked]:border-[var(--green-600)] hover:border-[var(--green-600)] transition ease-in-out delay-60"
+                    id="radio-general"
+                  >
+                    <input
+                      type="radio"
+                      class="mr-3"
+                      id="general_enquiry"
+                      name="query_type"
+                      value="general enquiry"
+                      required
+                    />
+                    General Enquiry
+                  </label>
+
+                  <label
+                    for="support_request"
+                    class="outline-none rounded-md bg-white border-solid border border-[hsl(186, 15%, 59%)] flex py-2 px-3 has-[:checked]:bg-[var(--green-200)] has-[:checked]:border-[var(--green-600)] hover:border-[var(--green-600)] transition ease-in-out delay-60"
+                    id="radio-support"
+                  >
+                    <input
+                      class="mr-3"
+                      type="radio"
+                      id="support_request"
+                      name="query_type"
+                      value="support request"
+                      required
+                    />
+                    Support Request
+                  </label>
+                </div>
+              </fieldset>
+
+              <div>
+                <label
+                  class="after:content-['*'] after:ml-2 after:text-green-400"
+                  for="message"
+                >
+                  Message
+                </label>
+                <textarea
+                  name="message"
+                  class="mt-4 resize-none h-30 outline-none w-full rounded-md bg-white border-solid border border-[hsl(186, 15%, 59%)] py-2 px-3 focus:border-[var(--green-600)] hover:border-[var(--green-600)] transition ease-in-out delay-60"
+                  id="message"
+                  required
+                ></textarea>
+              </div>
+            </div>
+            <!-- consentimiento -->
+            <div class="my-5 flex items-center">
+              <input
+                type="checkbox"
+                required
+                name="consent"
+                id="consent"
+                class="peer"
+              />
+              <label
+                class="text-wrap ml-3 text-black/40 after:content-['*'] after:ml-2 after:text-green-400 hover:text-[var(--green-600)] peer-checked:text-[var(--green-600)] transition ease-in-out delay-60"
+                for="consent"
+                >I consent to being contacted by the team</label
+              >
+            </div>
+            <button
+              class="bg-[var(--green-600)] w-full text-[var(--white)] py-3 px-4 text-lg rounded-md hover:bg-[#0f3e35] transition ease-in-out delay-60"
+              onclick="checkValues()"
+              id="submit"
+              type="submit"
+            >
+              Submit
+            </button>
+          </fieldset>
+        </form>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/koikiss-dev">Yako</a>.
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
